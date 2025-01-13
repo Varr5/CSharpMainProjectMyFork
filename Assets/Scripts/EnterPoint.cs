@@ -11,6 +11,15 @@ public class EnterPoint : MonoBehaviour
     [SerializeField] private Canvas _targetCanvas;
     
     private RootController _rootController;
+
+
+    //Привет, здесь был я!
+    /*/
+    *
+    *
+    *
+    /*/
+    
     
     void Start()
     {
