@@ -17,13 +17,11 @@ namespace UnitBrains.Player
         {
             float overheatTemperature = OverheatTemperature;
             ///////////////////////////////////////
-            // Homework 1.3 (1st block, 3rd module)
             float temperature = GetTemperature();
             if (temperature >= OverheatTemperature)
             {
                 return;
             }
-
             for (int i = 0; i <= temperature; i++)
             {
             var projectile = CreateProjectile(forTarget);
@@ -31,9 +29,8 @@ namespace UnitBrains.Player
             AddProjectileToList(projectile, intoList);
             }
             IncreaseTemperature();
-
+            // Homework 1.3 (1st block, 3rd module)
             ///////////////////////////////////////           
-            
             ///////////////////////////////////////
         }
 
@@ -41,7 +38,7 @@ namespace UnitBrains.Player
         {
             return base.GetNextStep();
         }
-        
+
         protected override List<Vector2Int> SelectTargets()
         {
             ///////////////////////////////////////
@@ -82,6 +79,5 @@ namespace UnitBrains.Player
             _temperature += 1f;
             if (_temperature >= OverheatTemperature) _overheated = true;
         }
-        
     }
 }
